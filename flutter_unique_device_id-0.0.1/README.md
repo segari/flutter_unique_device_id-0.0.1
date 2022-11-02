@@ -1,6 +1,6 @@
-# unique_device_id
+# flutter_unique_device_id
 
-A flutter plugin that can get a unique deviceId 
+A flutter plugin that can get a unique deviceId
 
 ## About android
 I know there isn't any 'perfect' way of getting a unique ID without using permissions; however, sometimes we only really need to track the device installation. When it comes to creating a unique ID, we can create a 'pseudo unique id' based solely on information that the Android API gives us without using extra permissions. This way, we can show the user respect and try to offer a good user experience as well.

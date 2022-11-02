@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:unique_device_id/flutter_unique_device_id.dart';
+import 'package:flutter_unique_device_id/flutter_unique_device_id.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -26,10 +28,12 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     String uniqueDeviceId;
     // Platform messages may fail, so we use a try/catch PlatformException.
+    // We also handle the message potentially returning null.
     try {
-      uniqueDeviceId = await UniqueDeviceId.get;
+      uniqueDeviceId =
+          await FlutterUniqueDeviceId.get ?? 'Unknown device ID';
     } on PlatformException {
-      uniqueDeviceId = 'Failed to get platform version.';
+      uniqueDeviceId = 'Failed to get device ID.';
     }
 
     // If the widget was removed from the tree while the asynchronous platform

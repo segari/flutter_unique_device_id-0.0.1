@@ -1,4 +1,4 @@
-package com.sharequeue.unique_device_id_example;
+package com.sharequeue.flutter_unique_device_id_example;
 
 import io.flutter.embedding.android.FlutterActivity;
 

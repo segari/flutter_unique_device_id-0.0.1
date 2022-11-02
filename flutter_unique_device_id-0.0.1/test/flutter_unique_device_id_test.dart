@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_unique_device_id/flutter_unique_device_id.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('unique_device_id');
+  const MethodChannel channel = MethodChannel('flutter_unique_device_id');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 
@@ -18,6 +18,6 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await UniqueDeviceId.get, '423dfg-3434-234234-234');
+    expect(await FlutterUniqueDeviceId.get, '423dfg-3434-234234-234');
   });
 }

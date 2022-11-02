@@ -1,6 +1,6 @@
-# unique_device_id_example
+# flutter_unique_device_id_example
 
-Demonstrates how to use the unique_device_id plugin.
+Demonstrates how to use the flutter_unique_device_id plugin.
 
 ## Getting Started
 

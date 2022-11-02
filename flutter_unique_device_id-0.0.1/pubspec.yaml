@@ -6,8 +6,8 @@ issue_tracker: https://github.com/sharequeue/unique_device_id/issues
 repository: https://github.com/sharequeue/unique_device_id
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.20.0"
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=2.5.0"
 
 dependencies:
   flutter:
@@ -16,6 +16,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -29,10 +30,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.sharequeue.unique_device_id
-        pluginClass: UniqueDeviceIdPlugin
+        package: com.sharequeue.flutter_unique_device_id
+        pluginClass: FlutterUniqueDeviceIdPlugin
       ios:
-        pluginClass: UniqueDeviceIdPlugin
+        pluginClass: FlutterUniqueDeviceIdPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

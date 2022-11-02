@@ -1,12 +1,12 @@
-#import "UniqueDeviceIdPlugin.h"
+#import "FlutterUniqueDeviceIdPlugin.h"
 #import "UIDevice+FCUUID.h"
 
-@implementation UniqueDeviceIdPlugin
+@implementation FlutterUniqueDeviceIdPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"unique_device_id"
+      methodChannelWithName:@"flutter_unique_device_id"
             binaryMessenger:[registrar messenger]];
-  UniqueDeviceIdPlugin* instance = [[UniqueDeviceIdPlugin alloc] init];
+  FlutterUniqueDeviceIdPlugin* instance = [[FlutterUniqueDeviceIdPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
 
